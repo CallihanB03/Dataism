@@ -18,6 +18,7 @@ class SQLViewController:
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = mainBackgroundColor
         sqlLessonsTableView.delegate = self
         sqlLessonsTableView.dataSource = self
         sqlTopicsLabel.font = UIFont(name: standardFont, size: 20)
@@ -34,6 +35,12 @@ class SQLViewController:
         let row = indexPath.row
             cell.textLabel?.text = sqlKeywords[row]
             return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == sqlLessonsTableViewCellIdentifer, let sqlLessonVC = segue.destination as? SqlLessonViewController, let lessonIndex = sqlLessonsTableView.indexPathForSelectedRow?.row{
+            sqlLessonVC.lessonName = sqlKeywords[lessonIndex]
+        }
     }
     
 }

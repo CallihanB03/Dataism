@@ -242,6 +242,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="1AF-03-ygC" kind="show" id="NT6-bo-KRG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -266,6 +269,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ziz-TU-Csr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3746" y="-555"/>
+        </scene>
+        <!--Sql Lesson View Controller-->
+        <scene sceneID="Jnx-rZ-urM">
+            <objects>
+                <viewController id="1AF-03-ygC" customClass="SqlLessonViewController" customModule="Dataism" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zii-NK-131">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuB-iK-QZ2">
+                                <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VuZ-gf-ZF3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nuB-iK-QZ2" firstAttribute="centerX" secondItem="Zii-NK-131" secondAttribute="centerX" id="37F-TK-Xxh"/>
+                            <constraint firstItem="nuB-iK-QZ2" firstAttribute="centerY" secondItem="Zii-NK-131" secondAttribute="centerY" id="SkH-eL-bXb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="spl-dE-XoF"/>
+                    <connections>
+                        <outlet property="sqlLessonTitleLabel" destination="nuB-iK-QZ2" id="Wnt-Fi-9Hz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Del-uu-FhA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4735" y="-556"/>
         </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="bzu-jv-Yi6">
@@ -391,6 +425,33 @@
             <point key="canvasLocation" x="3754" y="136"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="GaO-QD-Irw">
+            <objects>
+                <viewController id="iJB-D8-k7y" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V03-YQ-9jg">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmr-zL-r6y">
+                                <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aLc-Z0-6kY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Mmr-zL-r6y" firstAttribute="centerY" secondItem="V03-YQ-9jg" secondAttribute="centerY" id="GG4-Dk-G2A"/>
+                            <constraint firstItem="Mmr-zL-r6y" firstAttribute="centerX" secondItem="V03-YQ-9jg" secondAttribute="centerX" id="Vgx-5S-4fz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rIP-AX-Uw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4762" y="157"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="HsL-dH-dSd">
             <objects>
                 <viewController id="nZE-f9-QF1" sceneMemberID="viewController">
@@ -417,6 +478,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OCK-sw-RFA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3753.4351145038167" y="839.43661971830988"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="c34-Le-J6b">
+            <objects>
+                <viewController id="bxN-t6-8ae" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SYc-Z1-Ex5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmR-1L-gwU">
+                                <rect key="frame" x="175.66666666666666" y="415.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bye-QW-Toj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bmR-1L-gwU" firstAttribute="centerY" secondItem="SYc-Z1-Ex5" secondAttribute="centerY" id="fkA-n2-mHM"/>
+                            <constraint firstItem="bmR-1L-gwU" firstAttribute="centerX" secondItem="SYc-Z1-Ex5" secondAttribute="centerX" id="hc1-Hy-ddv"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PAs-py-xjf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4767" y="841"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="rMd-7m-NIB">
