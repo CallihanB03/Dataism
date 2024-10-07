@@ -8,6 +8,7 @@
 import UIKit
 
 class InterviewQuestionsViewController: UIViewController {
+    var delegate: UIViewController!
     var question = ""
     var answer = ""
 

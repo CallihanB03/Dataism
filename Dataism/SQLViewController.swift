@@ -10,7 +10,7 @@ import UIKit
 class SQLViewController:
     UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
+    var delegate: UIViewController!
     let sqlLessonsTableViewCellIdentifer = "SqlLessonTextCellIdentifier"
     
     @IBOutlet weak var sqlLessonsTableView: UITableView!

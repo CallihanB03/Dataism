@@ -39,12 +39,10 @@ class MainMenuViewController: UIViewController {
     }
     
     @IBAction func pressedInterviewQuestionsButton(_ sender: Any) {
-        performSegue(withIdentifier: interviewQuestionsSegueIdentifier, sender: self)
     }
     
     
     @IBAction func pressedDbmsButton(_ sender: Any) {
-        performSegue(withIdentifier: dbmsSegueIdentifier, sender: self)
     }
     
     @IBAction func pressedMachLearnButton(_ sender: Any) {
@@ -53,6 +51,21 @@ class MainMenuViewController: UIViewController {
     
     @IBAction func pressedDataVizButton(_ sender: Any) {
         performSegue(withIdentifier: dataVizSegueIdentifier, sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier ==
+            interviewQuestionsSegueIdentifier,
+           let interviewQuestionVC =
+            segue.destination as? InterviewQuestionsViewController{
+            interviewQuestionVC.delegate = self
+        }
+        
+        else if segue.identifier == dbmsSegueIdentifier, let dbmsVC = segue.destination as? SQLViewController{
+            dbmsVC.delegate = self
+        }
+        
+        
     }
     
 }

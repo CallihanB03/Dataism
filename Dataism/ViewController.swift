@@ -48,7 +48,6 @@ class ViewController: UIViewController {
             statusLabel.text = "Invalid Login"
             return
         }
-        performSegue(withIdentifier: loginSegueIdentifier, sender: self)
         
         
         
