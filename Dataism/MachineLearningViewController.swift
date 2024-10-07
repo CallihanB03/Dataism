@@ -24,6 +24,11 @@ class MachineLearningViewController: UIViewController, UITableViewDelegate, UITa
         machineLearningLessons.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
+    }
+
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = machineLearningTableView.dequeueReusableCell(withIdentifier: machineLearningTableViewCellIdentifier, for: indexPath)
         let row = indexPath.row
