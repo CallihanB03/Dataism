@@ -14,6 +14,8 @@ class DataVizViewController: UIViewController, UITableViewDelegate, UITableViewD
     let dataVizTopicsTableViewCellIdentifier = "DataVizTopicsTableViewCellIdentifier"
     @IBOutlet weak var dataVizTopicsTableView: UITableView!
     
+    let dataVizLessonsSegueIdentifier = "DataVizLessonsSegueIdentifier"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +38,13 @@ class DataVizViewController: UIViewController, UITableViewDelegate, UITableViewD
         let row = indexPath.row
         cell.textLabel?.text = dataVizTopics[row]
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == dataVizLessonsSegueIdentifier, let dataVizLessonsVC = segue.destination as? DataVizLessonsViewController {
+            dataVizLessonsVC.delegate = self
+        }
+            
     }
     
 

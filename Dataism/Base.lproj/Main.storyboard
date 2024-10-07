@@ -519,6 +519,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="bxN-t6-8ae" kind="show" identifier="DataVizLessonsSegueIdentifier" id="9JA-98-7Rl"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -543,10 +546,10 @@
             </objects>
             <point key="canvasLocation" x="3753.4351145038167" y="839.43661971830988"/>
         </scene>
-        <!--View Controller-->
+        <!--Data Viz Lessons View Controller-->
         <scene sceneID="c34-Le-J6b">
             <objects>
-                <viewController id="bxN-t6-8ae" sceneMemberID="viewController">
+                <viewController id="bxN-t6-8ae" customClass="DataVizLessonsViewController" customModule="Dataism" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SYc-Z1-Ex5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -565,6 +568,7 @@
                             <constraint firstItem="bmR-1L-gwU" firstAttribute="centerX" secondItem="SYc-Z1-Ex5" secondAttribute="centerX" id="hc1-Hy-ddv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="5cz-PX-9y5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAs-py-xjf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
