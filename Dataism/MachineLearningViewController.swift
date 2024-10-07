@@ -7,23 +7,29 @@
 
 import UIKit
 
-class MachineLearningViewController: UIViewController {
+class MachineLearningViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var delegate: UIViewController!
+    let machineLearningTableViewCellIdentifier = "MachineLearningTableViewCellIdentifier"
 
+    @IBOutlet weak var machineLearningTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        machineLearningTableView.delegate = self
+        machineLearningTableView.dataSource = self
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        machineLearningLessons.count
     }
-    */
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = machineLearningTableView.dequeueReusableCell(withIdentifier: machineLearningTableViewCellIdentifier, for: indexPath)
+        let row = indexPath.row
+        cell.textLabel?.text = machineLearningLessons[row]
+        return cell
+    }
+    
 
 }

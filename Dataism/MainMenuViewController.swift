@@ -46,7 +46,6 @@ class MainMenuViewController: UIViewController {
     }
     
     @IBAction func pressedMachLearnButton(_ sender: Any) {
-        performSegue(withIdentifier: machineLearningSegueIdentifier, sender: self)
     }
     
     @IBAction func pressedDataVizButton(_ sender: Any) {
@@ -63,6 +62,10 @@ class MainMenuViewController: UIViewController {
         
         else if segue.identifier == dbmsSegueIdentifier, let dbmsVC = segue.destination as? SQLViewController{
             dbmsVC.delegate = self
+        }
+        
+        else if segue.identifier == machineLearningSegueIdentifier, let machineLearningVC = segue.destination as? MachineLearningViewController{
+            machineLearningVC.delegate = self
         }
         
         
