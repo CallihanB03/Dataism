@@ -49,7 +49,6 @@ class MainMenuViewController: UIViewController {
     }
     
     @IBAction func pressedDataVizButton(_ sender: Any) {
-        performSegue(withIdentifier: dataVizSegueIdentifier, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -66,6 +65,10 @@ class MainMenuViewController: UIViewController {
         
         else if segue.identifier == machineLearningSegueIdentifier, let machineLearningVC = segue.destination as? MachineLearningViewController{
             machineLearningVC.delegate = self
+        }
+        
+        else if segue.identifier == dataVizSegueIdentifier, let dataVizVC = segue.destination as? DataVizViewController{
+            dataVizVC.delegate = self
         }
         
         
