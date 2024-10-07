@@ -11,6 +11,7 @@ class MachineLearningViewController: UIViewController, UITableViewDelegate, UITa
     
     var delegate: UIViewController!
     let machineLearningTableViewCellIdentifier = "MachineLearningTableViewCellIdentifier"
+    let machineLearningLessonsSegueIdentifier = "MachineLearningLessonsSegueIdentifier"
 
     @IBOutlet weak var machineLearningTableView: UITableView!
     override func viewDidLoad() {
@@ -34,6 +35,12 @@ class MachineLearningViewController: UIViewController, UITableViewDelegate, UITa
         let row = indexPath.row
         cell.textLabel?.text = machineLearningLessons[row]
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == machineLearningLessonsSegueIdentifier, let machineLearningLessonsVC = segue.destination as? MachineLearningLessonsViewController {
+            machineLearningLessonsVC.delegate = self
+        }
     }
     
 

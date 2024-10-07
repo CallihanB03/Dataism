@@ -430,6 +430,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="iJB-D8-k7y" kind="show" identifier="MachineLearningLessonsSegueIdentifier" id="iC5-X9-7hb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -476,6 +479,7 @@
                             <constraint firstItem="Mmr-zL-r6y" firstAttribute="centerX" secondItem="V03-YQ-9jg" secondAttribute="centerX" id="Vgx-5S-4fz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="FKz-Gi-3pb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIP-AX-Uw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
