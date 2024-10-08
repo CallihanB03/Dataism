@@ -14,11 +14,20 @@ class SettingsViewController: UIViewController {
     
     let settingsToMainMenuViewControllerSegueIdentifier = "SettingsToMainMenuViewControllerSegueIdentifier"
     
+    
+    @IBOutlet weak var settingsHeaderLabel: UILabel!
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = mainBackgroundColor
         
         segmentCtrl.selectedSegmentIndex = 2
+        
+        settingsHeaderLabel.font = UIFont(name: standardFont, size: 50)
 
         // Do any additional setup after loading the view.
     }

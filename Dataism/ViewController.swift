@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     let registrationSegueIdentifier = "RegistrationSegueIdentifier"
     let loginSegueIdentifier = "LoginSegueIdentifier"
     
+    var userName = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,9 +51,7 @@ class ViewController: UIViewController {
             return
         }
         
-        
-        
-        
+        userName = userNameTextField.text!
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
