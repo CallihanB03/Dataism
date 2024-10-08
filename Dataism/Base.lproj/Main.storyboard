@@ -367,16 +367,29 @@
                                     <segue destination="Mik-k2-ezt" kind="show" identifier="InterviewQuestionsSegueIdentifier" id="jzt-U1-sR1"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MnH-sF-ikl">
+                                <rect key="frame" x="90.666666666666686" y="769" width="212" height="32"/>
+                                <segments>
+                                    <segment title="Lessons"/>
+                                    <segment title="Profile"/>
+                                    <segment title="Settings"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onSegmentSelected:" destination="XFw-FC-mlJ" eventType="valueChanged" id="Lmi-HF-OoV"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QzT-UO-ykl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="NgJ-sS-ZDP" firstAttribute="top" secondItem="loZ-pY-7Dq" secondAttribute="bottom" constant="200" id="E6b-Ww-4mE"/>
+                            <constraint firstItem="MnH-sF-ikl" firstAttribute="top" secondItem="cNZ-V9-VWF" secondAttribute="bottom" constant="160" id="Fva-Yb-qOK"/>
                             <constraint firstItem="cNZ-V9-VWF" firstAttribute="top" secondItem="NgJ-sS-ZDP" secondAttribute="bottom" constant="10" id="GGa-hw-PGa"/>
                             <constraint firstItem="CnF-z0-UfK" firstAttribute="top" secondItem="E0f-jK-RgL" secondAttribute="bottom" constant="10" id="Nsh-g9-mSF"/>
                             <constraint firstItem="CnF-z0-UfK" firstAttribute="leading" secondItem="QzT-UO-ykl" secondAttribute="leading" constant="75" id="Qbe-PM-MTr"/>
                             <constraint firstItem="loZ-pY-7Dq" firstAttribute="top" secondItem="QzT-UO-ykl" secondAttribute="top" constant="35" id="UZj-YE-UQb"/>
                             <constraint firstItem="E0f-jK-RgL" firstAttribute="leading" secondItem="QzT-UO-ykl" secondAttribute="leading" constant="75" id="YZp-kB-5YH"/>
+                            <constraint firstItem="MnH-sF-ikl" firstAttribute="centerX" secondItem="UA3-v8-gld" secondAttribute="centerX" id="jIo-np-rAq"/>
                             <constraint firstItem="loZ-pY-7Dq" firstAttribute="centerX" secondItem="UA3-v8-gld" secondAttribute="centerX" id="jkz-nh-Kup"/>
                             <constraint firstItem="QzT-UO-ykl" firstAttribute="trailing" secondItem="cNZ-V9-VWF" secondAttribute="trailing" constant="75" id="kON-cL-NMF"/>
                             <constraint firstItem="QzT-UO-ykl" firstAttribute="trailing" secondItem="NgJ-sS-ZDP" secondAttribute="trailing" constant="75" id="lyF-qv-93q"/>
@@ -389,12 +402,47 @@
                         <outlet property="dbmsButton" destination="NgJ-sS-ZDP" id="RCI-dT-HAj"/>
                         <outlet property="interviewQuestionButton" destination="E0f-jK-RgL" id="3HJ-0y-w2z"/>
                         <outlet property="mainMenuPromptLabel" destination="loZ-pY-7Dq" id="Dkt-Jb-4V5"/>
+                        <outlet property="mainMenuSegmentedViewController" destination="MnH-sF-ikl" id="qB7-td-NED"/>
                         <outlet property="mlButton" destination="CnF-z0-UfK" id="ny6-YV-tcS"/>
+                        <segue destination="sVL-72-dFv" kind="show" identifier="ProfileViewControllerSegueIdentifier" id="W5j-XD-bRk"/>
+                        <segue destination="cof-QQ-vyT" kind="show" identifier="SettingsViewControllerSegueIdentifier" id="INn-Jc-Yew"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="555-id-PuH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2603.8167938931297" y="-27.464788732394368"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="uiF-7Y-N1l">
+            <objects>
+                <viewController id="sVL-72-dFv" customClass="ProfileViewController" customModule="Dataism" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="brn-Os-3ix">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="r6D-cN-OMy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uJe-Hz-zWM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fyT-AN-04W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1883" y="739"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="FDa-NC-e9f">
+            <objects>
+                <viewController id="cof-QQ-vyT" customClass="SettingsViewController" customModule="Dataism" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XcA-67-dCr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="1FB-OS-KNo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aei-Zk-zvr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8B-IH-vDS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2670" y="743"/>
         </scene>
         <!--Machine Learning View Controller-->
         <scene sceneID="mOw-YU-79Y">

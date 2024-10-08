@@ -14,11 +14,18 @@ class MainMenuViewController: UIViewController {
     @IBOutlet weak var dbmsButton: UIButton!
     @IBOutlet weak var mlButton: UIButton!
     @IBOutlet weak var dataVizButton: UIButton!
+    @IBOutlet weak var mainMenuSegmentedViewController: UISegmentedControl!
+    
+    
     
     let interviewQuestionsSegueIdentifier = "InterviewQuestionsSegueIdentifier"
     let dbmsSegueIdentifier = "SQLSegueIdentifier"
     let machineLearningSegueIdentifier = "MLSegueIdentifier"
     let dataVizSegueIdentifier = "DataVizSegueIdentifier"
+    
+    let profileViewControllerSegueIdentifier = "ProfileViewControllerSegueIdentifier"
+    
+    let settingsViewControllerSegueIdentifier = "SettingsViewControllerSegueIdentifier"
     
     
     
@@ -51,6 +58,8 @@ class MainMenuViewController: UIViewController {
     @IBAction func pressedDataVizButton(_ sender: Any) {
     }
     
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier ==
             interviewQuestionsSegueIdentifier,
@@ -70,8 +79,20 @@ class MainMenuViewController: UIViewController {
         else if segue.identifier == dataVizSegueIdentifier, let dataVizVC = segue.destination as? DataVizViewController{
             dataVizVC.delegate = self
         }
-        
-        
     }
+    
+    @IBAction func onSegmentSelected(_ sender: Any) {
+        switch mainMenuSegmentedViewController.selectedSegmentIndex {
+        case 0:
+            break
+        case 1:
+            performSegue(withIdentifier: profileViewControllerSegueIdentifier, sender: self)
+        case 2:
+            performSegue(withIdentifier: settingsViewControllerSegueIdentifier, sender: self)
+        default:
+            break
+        }
+    }
+    
     
 }
