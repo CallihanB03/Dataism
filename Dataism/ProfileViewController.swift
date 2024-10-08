@@ -27,16 +27,16 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = mainBackgroundColor
         segmentCtrl.selectedSegmentIndex = 1
-        profileHeaderLabel.font = UIFont(name: standardFont, size: 50)
+        profileHeaderLabel.font = UIFont(name: standardFont, size: 30)
         userProfileLabel.font = UIFont(name: standardFont, size: 30)
         userXPLabel.font = UIFont(name: standardFont, size: 30)
         userLeagueLabel.font = UIFont(name: standardFont, size: 30)
         
-        userProfileLabel.text = "User: \(loginObj.userName)"
-        
-        userXPLabel.text = "0"
-        
-        userLeagueLabel.text = "Bronze"
+//        userProfileLabel.text = "User: \(loginObj.userName)"
+//        
+//        userXPLabel.text = "0"
+//        
+//        userLeagueLabel.text = "League: \(loginObj.league)"
         
         
     }

@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     let loginSegueIdentifier = "LoginSegueIdentifier"
     
     var userName = ""
+    var league = "Bronze"
     
     
     override func viewDidLoad() {
@@ -60,11 +61,15 @@ class ViewController: UIViewController {
             registrationVC.delegate = self
         }
         
-        else if segue.identifier == loginSegueIdentifier {
+        else if segue.identifier ==
+                    loginSegueIdentifier {
             if let mainMenuVC = segue.destination as? MainMenuViewController {
                 mainMenuVC.delegate = self
                 
             }
+            
+            userName = userNameTextField.text!
+            
         }
     }
     
