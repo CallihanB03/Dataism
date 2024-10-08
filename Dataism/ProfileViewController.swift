@@ -8,22 +8,27 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    @IBOutlet weak var segmentCtrl: UISegmentedControl!
+    let profileToMainMenuViewControllerSegueIdentifier = "ProfileToMainMenuViewControllerSegueIdentifier"
+    let profileToSettingsViewControllerSegueIdentifier = "ProfileToSettingsViewControllerSegueIdentifier"
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = mainBackgroundColor
+        segmentCtrl.selectedSegmentIndex = 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onSegmentCtrl(_ sender: Any) {
+        switch segmentCtrl.selectedSegmentIndex {
+        case 0:
+            performSegue(withIdentifier: profileToMainMenuViewControllerSegueIdentifier, sender: self)
+        case 1:
+            break
+        case 2:
+            performSegue(withIdentifier: profileToSettingsViewControllerSegueIdentifier, sender: self)
+        default:
+            break
+        }
     }
-    */
+    
 
 }
