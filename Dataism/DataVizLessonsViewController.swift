@@ -9,22 +9,35 @@ import UIKit
 
 class DataVizLessonsViewController: UIViewController {
     var delegate: UIViewController!
-
+    
+    
+    @IBOutlet weak var plottingTitleLable: UILabel!
+    @IBOutlet weak var codeDisplayLabel: UILabel!
+    @IBOutlet weak var plotPlaceholderLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = mainBackgroundColor
+        
+        plottingTitleLable.font = UIFont(name: standardFont, size: 30)
+        
+        
+        
+        codeDisplayLabel.text = 
+        "from matplotlib import pyplot as plt \n x = [1, 2, 3, 4, 5] \n y = [1, 2, 3, 4, 5] \n plt.plot(data) \n plt.show()"
+        
+        codeDisplayLabel.backgroundColor = .white
+        
+        codeDisplayLabel.lineBreakMode = .byTruncatingTail
+        codeDisplayLabel.numberOfLines = 0
+        plotPlaceholderLabel.text = ""
+        plotPlaceholderLabel.backgroundColor = .white
+        
 
-        // Do any additional setup after loading the view.
     }
     
+    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

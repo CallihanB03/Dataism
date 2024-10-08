@@ -12,23 +12,43 @@ class SqlLessonViewController: UIViewController {
     
     
     @IBOutlet weak var sqlLessonTitleLabel: UILabel!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        sqlLessonTitleLabel.text = lessonName
-        sqlLessonTitleLabel.font = UIFont(name: standardFont, size: 20)
-        
-
-    }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBOutlet weak var sqlLessonDescriptionLabel: UILabel!
+    
+    @IBOutlet weak var sqlCodeExampleLabel: UILabel!
+    
+    
+    @IBOutlet weak var sqlLessonTextLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = mainBackgroundColor
+        
+        sqlLessonTitleLabel.text = "SELECT"
+        sqlLessonTitleLabel.font = UIFont(name: standardFont, size: 20)
+        sqlLessonDescriptionLabel.numberOfLines = 0
+        
+        sqlLessonDescriptionLabel.lineBreakMode = .byWordWrapping
+        
+        sqlLessonDescriptionLabel.text =
+        "The SELECT statement in SQL is used to retrieve data from one or more tables in a database. It allows you to specify which columns you want to see, apply filters to narrow down results, sort the data, and even perform calculations or aggregations on the data. Here’s a breakdown of the components you can include in a SELECT statement:"
+        
+        
+        
+        sqlLessonDescriptionLabel.font = UIFont(name: standardFont, size: 14)
+        
+        sqlLessonTextLabel.backgroundColor =    .white
+        
     }
-    */
-
+    
+// finish this
+//    func highlightKeywords(s:String) -> String {
+//        var words = s.split(separator: .whitespaces)
+//        
+//        for word in words {
+//            {sqlKeywords.contains(word)
+//        }
+//            
+//    }
 }

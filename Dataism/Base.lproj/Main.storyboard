@@ -278,8 +278,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nuB-iK-QZ2">
-                                <rect key="frame" x="175.66666666666666" y="410.66666666666669" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SELECT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hxS-sR-9uT">
+                                <rect key="frame" x="166" y="50" width="61" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OeN-DM-fkk">
+                                <rect key="frame" x="71.666666666666686" y="121" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="PDV-jp-wCd"/>
+                                    <constraint firstAttribute="height" constant="250" id="frH-N2-H4Q"/>
+                                </constraints>
+                                <string key="text">        "The SELECT statement in SQL is used to retrieve data from one or more tables in a database. It allows you to specify which columns you want to see, apply filters to narrow down results, sort the data, and even perform calculations or aggregations on the data. Here’s a breakdown of the components you can include in a SELECT statement:"
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPf-hV-k0K">
+                                <rect key="frame" x="46.666666666666657" y="401" width="300" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="pb9-bY-2G3"/>
+                                    <constraint firstAttribute="height" constant="85" id="wIw-Lv-q2k"/>
+                                </constraints>
+                                <string key="text">SELECT column1, column2, ...
+FROM table_name</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -288,18 +312,25 @@
                         <viewLayoutGuide key="safeArea" id="VuZ-gf-ZF3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nuB-iK-QZ2" firstAttribute="centerX" secondItem="Zii-NK-131" secondAttribute="centerX" id="37F-TK-Xxh"/>
-                            <constraint firstItem="nuB-iK-QZ2" firstAttribute="centerY" secondItem="Zii-NK-131" secondAttribute="centerY" id="SkH-eL-bXb"/>
+                            <constraint firstItem="zPf-hV-k0K" firstAttribute="centerX" secondItem="Zii-NK-131" secondAttribute="centerX" id="FWf-aV-oGI"/>
+                            <constraint firstItem="OeN-DM-fkk" firstAttribute="centerX" secondItem="Zii-NK-131" secondAttribute="centerX" id="G2t-Mb-9Wu"/>
+                            <constraint firstItem="hxS-sR-9uT" firstAttribute="top" secondItem="VuZ-gf-ZF3" secondAttribute="top" constant="50" id="XzO-p3-Dxe"/>
+                            <constraint firstItem="zPf-hV-k0K" firstAttribute="top" secondItem="OeN-DM-fkk" secondAttribute="bottom" constant="30" id="gzz-mZ-U8K"/>
+                            <constraint firstItem="OeN-DM-fkk" firstAttribute="top" secondItem="hxS-sR-9uT" secondAttribute="bottom" constant="50" id="rOh-g6-cH7"/>
+                            <constraint firstItem="hxS-sR-9uT" firstAttribute="centerX" secondItem="Zii-NK-131" secondAttribute="centerX" id="vo9-As-dR6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="spl-dE-XoF"/>
                     <connections>
-                        <outlet property="sqlLessonTitleLabel" destination="nuB-iK-QZ2" id="Wnt-Fi-9Hz"/>
+                        <outlet property="sqlCodeExampleLabel" destination="zPf-hV-k0K" id="efB-ac-6HB"/>
+                        <outlet property="sqlLessonDescriptionLabel" destination="OeN-DM-fkk" id="2Ci-I5-6I8"/>
+                        <outlet property="sqlLessonTextLabel" destination="zPf-hV-k0K" id="Wme-YB-qBb"/>
+                        <outlet property="sqlLessonTitleLabel" destination="hxS-sR-9uT" id="mgd-pN-n7b"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Del-uu-FhA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4735" y="-556"/>
+            <point key="canvasLocation" x="4733.5877862595416" y="-556.33802816901414"/>
         </scene>
         <!--Main Menu View Controller-->
         <scene sceneID="bzu-jv-Yi6">
@@ -525,15 +556,23 @@
                                     <segment title="Dark"/>
                                 </segments>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3iM-vC-AwV">
+                                <rect key="frame" x="154" y="656" width="85" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Log Out"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1FB-OS-KNo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rXG-UP-eiq" firstAttribute="centerX" secondItem="XcA-67-dCr" secondAttribute="centerX" id="24c-m4-bR2"/>
+                            <constraint firstItem="3iM-vC-AwV" firstAttribute="centerX" secondItem="XcA-67-dCr" secondAttribute="centerX" id="2B7-gC-6AA"/>
                             <constraint firstItem="dYU-8g-Pnq" firstAttribute="top" secondItem="Rri-gv-8Fw" secondAttribute="bottom" constant="50" id="VSA-AC-DD3"/>
                             <constraint firstItem="Rri-gv-8Fw" firstAttribute="centerX" secondItem="XcA-67-dCr" secondAttribute="centerX" id="adE-N5-pgk"/>
+                            <constraint firstItem="rXG-UP-eiq" firstAttribute="top" secondItem="3iM-vC-AwV" secondAttribute="bottom" constant="100" id="bjv-oK-JR4"/>
                             <constraint firstItem="dYU-8g-Pnq" firstAttribute="centerX" secondItem="XcA-67-dCr" secondAttribute="centerX" id="cG5-14-Ohg"/>
                             <constraint firstItem="1FB-OS-KNo" firstAttribute="bottom" secondItem="rXG-UP-eiq" secondAttribute="bottom" constant="20" id="oh6-6z-IWf"/>
+                            <constraint firstItem="3iM-vC-AwV" firstAttribute="centerX" secondItem="XcA-67-dCr" secondAttribute="centerX" id="qKb-wJ-RO1"/>
                             <constraint firstItem="Jz2-kS-bd8" firstAttribute="centerX" secondItem="XcA-67-dCr" secondAttribute="centerX" id="rZs-7U-JRY"/>
                             <constraint firstItem="Rri-gv-8Fw" firstAttribute="top" secondItem="1FB-OS-KNo" secondAttribute="top" constant="75" id="xcE-PE-hz9"/>
                             <constraint firstItem="Jz2-kS-bd8" firstAttribute="top" secondItem="dYU-8g-Pnq" secondAttribute="bottom" constant="50" id="xnF-5h-uf0"/>
@@ -542,6 +581,7 @@
                     <navigationItem key="navigationItem" id="aei-Zk-zvr"/>
                     <connections>
                         <outlet property="colorSchemeLabel" destination="dYU-8g-Pnq" id="bXF-dJ-IG0"/>
+                        <outlet property="logoutButton" destination="3iM-vC-AwV" id="eSC-gQ-g1M"/>
                         <outlet property="segmentCtrl" destination="rXG-UP-eiq" id="8Qj-6o-tUV"/>
                         <outlet property="settingsHeaderLabel" destination="Rri-gv-8Fw" id="9X6-aY-ObT"/>
                         <segue destination="XFw-FC-mlJ" kind="show" identifier="SettingsToMainMenuViewControllerSegueIdentifier" id="aYr-4t-ESD"/>
@@ -613,16 +653,37 @@
             </objects>
             <point key="canvasLocation" x="3754" y="136"/>
         </scene>
-        <!--View Controller-->
+        <!--Machine Learning Lessons View Controller-->
         <scene sceneID="GaO-QD-Irw">
             <objects>
-                <viewController id="iJB-D8-k7y" sceneMemberID="viewController">
+                <viewController id="iJB-D8-k7y" customClass="MachineLearningLessonsViewController" customModule="Dataism" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V03-YQ-9jg">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmr-zL-r6y">
-                                <rect key="frame" x="175.66666666666666" y="410.66666666666669" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="K Nearest Neighbors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmr-zL-r6y">
+                                <rect key="frame" x="117.66666666666669" y="50" width="158" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDh-Zj-Pf3">
+                                <rect key="frame" x="46.666666666666657" y="121" width="300" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="Ta1-l2-JlN"/>
+                                    <constraint firstAttribute="width" constant="300" id="nVS-qu-Beb"/>
+                                </constraints>
+                                <string key="text">The K Nearest Neighbors algorithm works by considering the classes of the k most similar data observations to predict the class of a new data observation.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67i-sx-Lfc">
+                                <rect key="frame" x="46.666666666666657" y="346" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Uch-aa-U2Q"/>
+                                    <constraint firstAttribute="height" constant="300" id="u7K-9z-LuC"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -631,15 +692,22 @@
                         <viewLayoutGuide key="safeArea" id="aLc-Z0-6kY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Mmr-zL-r6y" firstAttribute="centerY" secondItem="V03-YQ-9jg" secondAttribute="centerY" id="GG4-Dk-G2A"/>
+                            <constraint firstItem="Mmr-zL-r6y" firstAttribute="top" secondItem="aLc-Z0-6kY" secondAttribute="top" constant="50" id="G6J-pe-xKL"/>
+                            <constraint firstItem="jDh-Zj-Pf3" firstAttribute="top" secondItem="Mmr-zL-r6y" secondAttribute="bottom" constant="50" id="PMk-Ee-SuZ"/>
+                            <constraint firstItem="jDh-Zj-Pf3" firstAttribute="centerX" secondItem="V03-YQ-9jg" secondAttribute="centerX" id="QhI-eC-CRi"/>
                             <constraint firstItem="Mmr-zL-r6y" firstAttribute="centerX" secondItem="V03-YQ-9jg" secondAttribute="centerX" id="Vgx-5S-4fz"/>
+                            <constraint firstItem="67i-sx-Lfc" firstAttribute="top" secondItem="jDh-Zj-Pf3" secondAttribute="bottom" constant="100" id="gM8-hc-SGK"/>
+                            <constraint firstItem="67i-sx-Lfc" firstAttribute="centerX" secondItem="V03-YQ-9jg" secondAttribute="centerX" id="uXf-zw-ieY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FKz-Gi-3pb"/>
+                    <connections>
+                        <outlet property="machineLearningImagePlaceholderLabel" destination="67i-sx-Lfc" id="F7E-lF-yIl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rIP-AX-Uw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4762" y="157"/>
+            <point key="canvasLocation" x="4761.0687022900765" y="156.33802816901408"/>
         </scene>
         <!--Data Viz View Controller-->
         <scene sceneID="HsL-dH-dSd">
@@ -710,8 +778,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmR-1L-gwU">
-                                <rect key="frame" x="175.66666666666666" y="410.66666666666669" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plotting with Matplotlib" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a9j-JA-ehA">
+                                <rect key="frame" x="109" y="50" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZr-m7-Dnv">
+                                <rect key="frame" x="71.666666666666686" y="96" width="250" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="QHx-bJ-2n7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="ioF-eC-lek"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rg1-g1-nx6">
+                                <rect key="frame" x="46.666666666666657" y="346" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7eT-R2-rjZ"/>
+                                    <constraint firstAttribute="height" constant="300" id="DQF-We-lcP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -720,15 +808,24 @@
                         <viewLayoutGuide key="safeArea" id="Bye-QW-Toj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bmR-1L-gwU" firstAttribute="centerY" secondItem="SYc-Z1-Ex5" secondAttribute="centerY" id="fkA-n2-mHM"/>
-                            <constraint firstItem="bmR-1L-gwU" firstAttribute="centerX" secondItem="SYc-Z1-Ex5" secondAttribute="centerX" id="hc1-Hy-ddv"/>
+                            <constraint firstItem="a9j-JA-ehA" firstAttribute="centerX" secondItem="SYc-Z1-Ex5" secondAttribute="centerX" id="AWx-qh-kU3"/>
+                            <constraint firstItem="rg1-g1-nx6" firstAttribute="centerX" secondItem="SYc-Z1-Ex5" secondAttribute="centerX" id="AdP-xl-rzD"/>
+                            <constraint firstItem="rg1-g1-nx6" firstAttribute="top" secondItem="hZr-m7-Dnv" secondAttribute="bottom" constant="100" id="Mpo-P9-c6q"/>
+                            <constraint firstItem="hZr-m7-Dnv" firstAttribute="top" secondItem="a9j-JA-ehA" secondAttribute="bottom" constant="25" id="ccb-pe-PxF"/>
+                            <constraint firstItem="a9j-JA-ehA" firstAttribute="top" secondItem="Bye-QW-Toj" secondAttribute="top" constant="50" id="y7J-Ck-DbV"/>
+                            <constraint firstItem="hZr-m7-Dnv" firstAttribute="centerX" secondItem="SYc-Z1-Ex5" secondAttribute="centerX" id="ysC-i6-zsV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5cz-PX-9y5"/>
+                    <connections>
+                        <outlet property="codeDisplayLabel" destination="hZr-m7-Dnv" id="V7F-cr-NkI"/>
+                        <outlet property="plotPlaceholderLabel" destination="rg1-g1-nx6" id="yoF-bg-o96"/>
+                        <outlet property="plottingTitleLable" destination="a9j-JA-ehA" id="IH4-LM-nYW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PAs-py-xjf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4767" y="841"/>
+            <point key="canvasLocation" x="4765.6488549618316" y="840.84507042253529"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="rMd-7m-NIB">

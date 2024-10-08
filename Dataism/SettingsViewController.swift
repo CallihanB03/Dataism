@@ -19,6 +19,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var colorSchemeLabel: UILabel!
     
+    @IBOutlet weak var logoutButton: UIButton!
     
     
     
@@ -30,6 +31,8 @@ class SettingsViewController: UIViewController {
         
         settingsHeaderLabel.font = UIFont(name: standardFont, size: 50)
         colorSchemeLabel.font = UIFont(name: standardFont, size: 30)
+        
+        logoutButton.tintColor = UIColor.black
         
         
         
