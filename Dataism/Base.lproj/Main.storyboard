@@ -511,18 +511,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color Scheme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYU-8g-Pnq">
+                                <rect key="frame" x="142.66666666666666" y="146" width="108" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jz2-kS-bd8">
+                                <rect key="frame" x="114.66666666666669" y="217" width="164" height="32"/>
+                                <segments>
+                                    <segment title="BEVO"/>
+                                    <segment title="Light"/>
+                                    <segment title="Dark"/>
+                                </segments>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1FB-OS-KNo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="rXG-UP-eiq" firstAttribute="centerX" secondItem="XcA-67-dCr" secondAttribute="centerX" id="24c-m4-bR2"/>
+                            <constraint firstItem="dYU-8g-Pnq" firstAttribute="top" secondItem="Rri-gv-8Fw" secondAttribute="bottom" constant="50" id="VSA-AC-DD3"/>
                             <constraint firstItem="Rri-gv-8Fw" firstAttribute="centerX" secondItem="XcA-67-dCr" secondAttribute="centerX" id="adE-N5-pgk"/>
+                            <constraint firstItem="dYU-8g-Pnq" firstAttribute="centerX" secondItem="XcA-67-dCr" secondAttribute="centerX" id="cG5-14-Ohg"/>
                             <constraint firstItem="1FB-OS-KNo" firstAttribute="bottom" secondItem="rXG-UP-eiq" secondAttribute="bottom" constant="20" id="oh6-6z-IWf"/>
+                            <constraint firstItem="Jz2-kS-bd8" firstAttribute="centerX" secondItem="XcA-67-dCr" secondAttribute="centerX" id="rZs-7U-JRY"/>
                             <constraint firstItem="Rri-gv-8Fw" firstAttribute="top" secondItem="1FB-OS-KNo" secondAttribute="top" constant="75" id="xcE-PE-hz9"/>
+                            <constraint firstItem="Jz2-kS-bd8" firstAttribute="top" secondItem="dYU-8g-Pnq" secondAttribute="bottom" constant="50" id="xnF-5h-uf0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aei-Zk-zvr"/>
                     <connections>
+                        <outlet property="colorSchemeLabel" destination="dYU-8g-Pnq" id="bXF-dJ-IG0"/>
                         <outlet property="segmentCtrl" destination="rXG-UP-eiq" id="8Qj-6o-tUV"/>
                         <outlet property="settingsHeaderLabel" destination="Rri-gv-8Fw" id="9X6-aY-ObT"/>
                         <segue destination="XFw-FC-mlJ" kind="show" identifier="SettingsToMainMenuViewControllerSegueIdentifier" id="aYr-4t-ESD"/>
@@ -873,7 +892,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Da0-dS-rAK"/>
         <segue reference="1dV-NB-CPI"/>
-        <segue reference="Gx9-Vz-uqY"/>
+        <segue reference="aYr-4t-ESD"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

@@ -17,6 +17,7 @@ class SettingsViewController: UIViewController {
     
     @IBOutlet weak var settingsHeaderLabel: UILabel!
     
+    @IBOutlet weak var colorSchemeLabel: UILabel!
     
     
     
@@ -28,6 +29,10 @@ class SettingsViewController: UIViewController {
         segmentCtrl.selectedSegmentIndex = 2
         
         settingsHeaderLabel.font = UIFont(name: standardFont, size: 50)
+        colorSchemeLabel.font = UIFont(name: standardFont, size: 30)
+        
+        
+        
 
         // Do any additional setup after loading the view.
     }
